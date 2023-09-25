@@ -18,23 +18,23 @@ To avoid wake a sleeping dog, 0x1115 quickly took a snapshot of Libra Dnuf marke
 
 - Truy cập vào trang web, ta thấy được 1 form login, đề bài đã cho ta 2 account là bob và alice, thử đăng nhập vào xem có gì hay :D
 
-<img src="assets/writeup/cookie/Be Positive/0.png">
+<img src="/assets/writeup/cookie/Be Positive/0.png">
 - sau khi đăng nhập vào (alice) ta thấy được rằng có 1 số chức năng…. ( đọc đề đi lười ghi quá)
 
-<img src="assets/writeup/cookie/Be Positive/1.png">
+<img src="/assets/writeup/cookie/Be Positive/1.png">
 
 - mục tiêu của bài này có vẻ như là ta phải mua được flag ( giá 3001$), tuy nhiên cả 2 account của ta chỉ có tổng cộng 3000$? , thôi thì thử chuyển tiền sang bob xem sao
 
-<img src="assets/writeup/cookie/Be Positive/2png">
+<img src="/assets/writeup/cookie/Be Positive/2png">
 
 - sau khi chuyển tiền xong, ta dùng burpsuite bắt lại gói tin, thật ra bài này đọc đề bài là mình đã liên tưởng đến việc dùng số âm rồi ( be positive mà), nên ta dùng chức năng Repeater của burp để chuyển lại thêm lần nữa
 
-<img src="assets/writeup/cookie/Be Positive/3.png">
+<img src="/assets/writeup/cookie/Be Positive/3.png">
 
 - thử chuyển bằng số âm thì BOMMM, vẫn chuyển được :D, lúc này có vẻ như bob mất -99999
 
-<img src="assets/writeup/cookie/Be Positive/4.png">
+<img src="/assets/writeup/cookie/Be Positive/4.png">
 
 - Sau đó thì mua flag thôi :D, bài này khá dễ nếu nhìn đúng trọng tâm
 
-<img src="assets/writeup/cookie/Be Positive/5.png">
+<img src="/assets/writeup/cookie/Be Positive/5.png">
