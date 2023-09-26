@@ -49,7 +49,7 @@ Command: `ffuf -w common.txt.1 -u https://hackerpage.fiahackingisfun.id.vn/FUZZ 
 
 <img src="/assets/writeup/cookie/Go around a Webpage/5.png">
 
-- Tìm được `/development` thử truy cập vào thì hiện ra thông báo như sau
+- Tìm được `/development` , ta truy cập vào thì xuất hiện thông báo
 
 <img src="/assets/writeup/cookie/Go around a Webpage/6.png">
 
@@ -81,8 +81,10 @@ Command: `ffuf -w common.txt.1 -u https://hackerpage.fiahackingisfun.id.vn/FUZZ 
 
 <img src="/assets/writeup/cookie/Go around a Webpage/11.png">
 
-- Có vẻ như trình duyệt đã giớn hạn chỉ có FIA_Member browser mới được truy cập vào site này.
-- Ta sử dụng burpsuite và chức năng send to repeater của nó để thay đổi nội dung gói tin chuyển đi, ta tận dụng field `User-Agent` chứa **untrusted data** để thay đổi nội dung của nó thành `FIA_Member`
+- Có vẻ như trình duyệt đã giới hạn chỉ có FIA_Member browser mới được truy cập vào site này.
+- Ta sử dụng Burpsuite và chức năng `send to repeater` của nó để thay đổi nội dung gói tin chuyển đi.
+- Vì HTTP header User-Agent sẽ cho server biết mình đang dùng trình duyệt nào thì mình sẽ thay đổi giá trị của header này để thông qua
+
 
 <img src="/assets/writeup/cookie/Go around a Webpage/12.png">
 
