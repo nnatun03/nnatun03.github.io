@@ -27,7 +27,7 @@ You cannot execute a Web Shell in the current upload directory. Find a way to up
 
 - đọc thì có vẻ như chỉ có thể upload được file với các định dạng như (gif,jpg,png). Sau đó sẽ được upload lên /upload.php với format là
     
-    [`http://13.215.248.36:32716/upload/example.gif`](http://13.215.248.36:32716/upload/example.gif)
+    `http://13.215.248.36:32716/upload/example.gif`
     
 - mình thử sử dụng 1 file gif up lên, sau đó dùng burpsuite và send to repeater.
 
