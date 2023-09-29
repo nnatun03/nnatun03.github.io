@@ -12,14 +12,13 @@ https://github.com/nnatun03/safe-exam-browser-bypass/blob/main/SafeExamBrowser.S
 
 Tải 2 bản này và mọi người cóa thể tab ra để search đáp án được nhe
 ## How to use
-
 1. Tải xuống SafeExamBrowser.Monitoring.dll và SafeExamBrowser.SystemComponents.dll
 2. Sao chép hai tệp này.
 3. Đi đến `C:\Program Files\SafeExamBrowser\Application`.
 4. Dán chúng vào thư mục này.
 5. Bạn sẽ cần `quyền admin` để thay thế các tệp trong thư mục này.
 6. Sau khi thay thế, mở SEB chạy trong VM.
-
+p/s: lưu ý là vào máy ảo tải Safe exam ( tất cả những bước trên đều làm trong máy ảo win8 hoặc 10 tùy)
 ## Recommended
 
 Nên chỉnh cho VM trông giống như máy tính thực bằng cách sao chép mẫu và công ty của máy tính chủ (máy tính mà VM đang chạy).
