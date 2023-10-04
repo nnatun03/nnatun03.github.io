@@ -1,5 +1,10 @@
+---
+title: Write-Up Play with python flask app
+date: 2023-10-4 7:55:00 +0700
+categories: [CTF, FIA-FPTU, Write-Up]
+tags: [web, write-up, ctf]     # TAG names should always be lowercase
+---
 # Play with python flask app
-
 ## **Tổng quan**
 
 - Để giải được challenge này, ta cần vận dụng kiến thức về các lỗi bảo mật như
