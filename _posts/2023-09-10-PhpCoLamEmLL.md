@@ -1,0 +1,76 @@
+---
+title: Write-Up PHP có làm em lo lắng
+date: 2023-10-09 12:44:01 +0700
+categories: [CTF, Cookie Hân Hoan, Write-Up]
+tags: [web, write-up, ctf]     # TAG names should always be lowercase
+---
+# PHP có làm em lo lắng
+
+## **Tổng quan**
+
+- Để giải được challenge này, ta cần vận dụng kiến thức về ngôn ngữ PHP và cách dùng BurpSuite
+- công cụ: Burpsuite
+
+## Phân tích bài
+
+- Truy cập trang web, ta thấy được form login, có chức năng đăng kí tài khoản.
+
+<img src="/assets/writeup/cookie/PHP co lam em lo lang/PHP có làm em lo lắng/0.png">
+- Sau khi tạo tài khoản và đăng nhập vào, chúng ta sẽ được điều hướng đến trang /index.php
+
+<img src="/assets/writeup/cookie/PHP co lam em lo lang/PHP có làm em lo lắng/1.png">
+
+- Trang có chức năng export to CVS với định dạng là đuôi `.cvs`, khi ta chọn export thì trang web sẽ tải lên file kèm theo đường dẫn đến file như hình bên dưới.
+
+<img src="/assets/writeup/cookie/PHP co lam em lo lang/PHP có làm em lo lắng/2.png">
+
+- Thử truy cập vào, lúc này mình liên tưởng tới Path-Traversal, tuy nhiên sau một lúc test thử thì có vẻ bài này không bị lỗi ấy.
+    
+<img src="/assets/writeup/cookie/PHP co lam em lo lang/PHP có làm em lo lắng/3.png">
+    
+- Tuy nhiên lúc này mình để ý được rằng tên đăng nhập của mình đã được export xuống như hình bên dưới, nên mình đã nghĩ tới 1 hướng đó chính là mình thử chèn một đoạn code PHP vào xem sao.
+- Tạo tài khoản với tên đăng nhập là `<?php phpinfo();?>`
+
+<img src="/assets/writeup/cookie/PHP co lam em lo lang/PHP có làm em lo lắng/4.png">
+
+- Tuy nhiên bài này ở đây đã filter cụm `<?php`, tức mỗi lần xuất hiện `<?php` thì bạn sẽ luôn bị chèn dấu `#` vào sau.
+
+<img src="/assets/writeup/cookie/PHP co lam em lo lang/PHP có làm em lo lắng/5.png">
+
+- Tuy nhiên mình để ý rằng bài này chỉ filter chính xác cụm `<?php`  làm thẻ mở đầu , tức là nếu mình các thẻ khác thì sẽ không bị chèn `#` vào. Lúc này mình thử search google xem có cách nào khác để mở thẻ không thì có một số cách như sau.
+
+```php
+<?
+echo "Hello World";
+?>
+```
+
+hoặc 
+
+```php
+<?= "Hello World" ?>
+```
+
+và 
+
+```php
+<%
+  echo "Hello World";
+%>
+```
+
+- Thử test với tên đăng nhập là `<?= system('ls -la /') ?>` thì có vẻ như ta đã bypass được filter của bài, tuy nhiên lúc này đoạn mã php của ta vẫn chưa được thực thi vì đuôi file vẫn đang là .cvs
+
+<img src="/assets/writeup/cookie/PHP co lam em lo lang/PHP có làm em lo lắng/6.png">
+
+- Lúc này mình tận dụng chức năng Intercep của BurpSuite để thay đổi đuôi tệp tin thành .php
+
+<img src="/assets/writeup/cookie/PHP co lam em lo lang/PHP có làm em lo lắng/7.png">
+
+- Sau khi click lại Forward thì các bạn có thể thấy đuôi file của ta đã trở thành .php
+
+<img src="/assets/writeup/cookie/PHP co lam em lo lang/PHP có làm em lo lắng/8.png">
+
+- DONEEEE, việc còn lại là đổi payload để cat flag thôi ^^
+
+<img src="/assets/writeup/cookie/PHP co lam em lo lang/PHP có làm em lo lắng/9.png">
