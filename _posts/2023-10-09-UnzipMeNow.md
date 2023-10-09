@@ -1,6 +1,6 @@
 ---
 title: Write-Up Unzip me now
-date: 2023-10-09 12:44:01 +0700
+date: 2023-10-09 2:44:01 +0700
 categories: [CTF, Cookie Hân Hoan, Write-Up]
 tags: [web, write-up, ctf]     # TAG names should always be lowercase
 ---
