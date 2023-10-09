@@ -40,7 +40,7 @@ Hmm... A simple Calculator app definitely NOTHING special :))
 <img src="/assets/writeup/cookie/IT SeSsion rev/3.png">
 
 - Bạn có thể dễ dàng nhận thấy rằng kết quả của 7 x 7 không phải 49 mà là 1 chuỗi khác.
-    - Khi bạn thực hiện **`calc={{ 7 * '7'}}`** trong một ngữ cảnh sử dụng một hệ thống template như Jinja2 hoặc một ngôn ngữ tương tự, dấu hai ngoặc mở `{{` và `}}` thường được sử dụng để định tuyến các biểu thức và lệnh.
+    - Khi bạn thực hiện `calc={{ 7 * '7'}}` trong một ngữ cảnh sử dụng một hệ thống template như Jinja2 hoặc một ngôn ngữ tương tự, dấu hai ngoặc mở `{{` và `}}` thường được sử dụng để định tuyến các biểu thức và lệnh.
     - Trong ví dụ trên, `7 * '7'` được giữa hai dấu ngoặc mở `{{` và `}}`, nhưng nó không được xem như một biểu thức số học bình thường trong ngữ cảnh của một hệ thống template. Thay vào đó, nó được xem như một chuỗi ký tự với một phép nhân giữa con số 7 và chuỗi '7'. Do đó, kết quả hiển thị là "7777777", trong đó số 7 được lặp lại bảy lần.
 
 <img src="/assets/writeup/cookie/IT SeSsion rev/4.png">
