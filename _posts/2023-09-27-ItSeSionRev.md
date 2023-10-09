@@ -30,17 +30,17 @@ Hmm... A simple Calculator app definitely NOTHING special :))
 
 <img src="/assets/writeup/cookie/IT SeSsion rev/1.png">
 
-- Ta nhận thấy server đã báo lỗi vì xuất hiện kí tự `{}` và phép toán của ta đã không được thực thi, tuy nhiến nếu ta chèn như thế này `{{ 1 * 3 }}`
+- Ta nhận thấy server đã báo lỗi vì xuất hiện kí tự `{}` và phép toán của ta đã không được thực thi, tuy nhiến nếu ta chèn như thế này `{{ 1 x 3 }}` (thay x bằng * nhé vì mình dùng * push ko đc bị lỗi huhu)
 
 <img src="/assets/writeup/cookie/IT SeSsion rev/2.png">
 
 - Bạn có thể thấy rằng phép toán của ta đã được thực thi, và từ đây ta đã xác thực được rằng server có thể bị khai thác bằng lỗi SSTI
-- Tuy nhiên lúc này ta phải kiểm tra xem thử template bài này là gì, ta sử dụng payload `{{ 7 * '7' }}` để test
+- Tuy nhiên lúc này ta phải kiểm tra xem thử template bài này là gì, ta sử dụng payload `{{ 7 x '7' }}` để test
 
 <img src="/assets/writeup/cookie/IT SeSsion rev/3.png">
 
 - Bạn có thể dễ dàng nhận thấy rằng kết quả của 7 x 7 không phải 49 mà là 1 chuỗi khác.
-    - Khi bạn thực hiện `calc={{ 7 * '7'}}` trong một ngữ cảnh sử dụng một hệ thống template như Jinja2 hoặc một ngôn ngữ tương tự, dấu hai ngoặc mở `{{` và `}}` thường được sử dụng để định tuyến các biểu thức và lệnh.
+    - Khi bạn thực hiện `calc={{ 7 x '7'}}` trong một ngữ cảnh sử dụng một hệ thống template như Jinja2 hoặc một ngôn ngữ tương tự, dấu hai ngoặc mở `{{` và `}}` thường được sử dụng để định tuyến các biểu thức và lệnh.
     - Trong ví dụ trên, `7 * '7'` được giữa hai dấu ngoặc mở `{{` và `}}`, nhưng nó không được xem như một biểu thức số học bình thường trong ngữ cảnh của một hệ thống template. Thay vào đó, nó được xem như một chuỗi ký tự với một phép nhân giữa con số 7 và chuỗi '7'. Do đó, kết quả hiển thị là "7777777", trong đó số 7 được lặp lại bảy lần.
 
 <img src="/assets/writeup/cookie/IT SeSsion rev/4.png">
