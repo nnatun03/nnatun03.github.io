@@ -7,7 +7,7 @@ tags: [web, write-up, ctf]     # TAG names should always be lowercase
 # Baby Assert
 ## **Tổng quan**
 
-- Để giải được challenge này, ta cần vận dụng kiến thức về
+- Để giải được challenge này, ta cần vận dụng kiến thức về LFI và Assert cũng như cách hoạt động của ngôn ngữ PHP
 - công cụ: Burpsuite
 
 ## Phân tích bài
