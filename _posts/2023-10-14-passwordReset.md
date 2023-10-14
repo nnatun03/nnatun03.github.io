@@ -16,10 +16,10 @@ tags: [web, write-up, ctf]     # TAG names should always be lowercase
 
 - Truy cập trang web với giao diện như sau, việc cần làm là ta sẽ test tất cả các chức năng của nó.
 
-<img src="/assets/writeup/cookie/Password Reset/Untitled .png">
+<img src="/assets/writeup/cookie/Password Reset/Untitled.png">
 - Sau khi test, mình tiến hành tạo tài khoản và đăng nhập, mình được điều hướng tới `/dashboard` , lúc này mình thấy được mail của Admin là admin@example.com
 
-<img src="/assets/writeup/cookie/Password Reset/Untitled 1 .png">
+<img src="/assets/writeup/cookie/Password Reset/Untitled 1.png">
 
 - Thử vào phần `/Forgot Password` và test với mail của mình
 
