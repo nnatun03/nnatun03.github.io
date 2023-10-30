@@ -1,14 +1,13 @@
 # Best bathroom on campus
 
-![Untitled](Best%20bathroom%20on%20campus%20e086b9d3d3ca4b8d8d0e25e09d83d1cd/Untitled.png)
-
+<img src="/assets/writeup/cookie/Best bathroom on campus e086b9d3d3ca4b8d8d0e25e09d83d1cd/Untitled.png">
 - Truy cập vào trang web ta thấy như sau, ta thấy khi giá trị UDCTF được truyền vào thì trả về giá trị là true.
 
-![Untitled](Best%20bathroom%20on%20campus%20e086b9d3d3ca4b8d8d0e25e09d83d1cd/Untitled%201.png)
+<img src="/assets/writeup/cookie/Best bathroom on campus e086b9d3d3ca4b8d8d0e25e09d83d1cd/Untitled 1.png">
 
 - Mình thử test format flag là UDCTF{ thì vẫn trả về true, có vẻ như bài này ta chỉ cần nhập vào chuỗi nằm trong flag thì sẽ trả về true, không thì sẽ là false, lúc này thì mình sẽ code python để tự động hóa
 
-![Untitled](Best%20bathroom%20on%20campus%20e086b9d3d3ca4b8d8d0e25e09d83d1cd/Untitled%202.png)
+<img src="/assets/writeup/cookie/Best bathroom on campus e086b9d3d3ca4b8d8d0e25e09d83d1cd/Untitled 2.png">
 
 ```python
 import requests
@@ -39,4 +38,4 @@ while True:
   print("Start over with full arr")
 ```
 
-![Untitled](Best%20bathroom%20on%20campus%20e086b9d3d3ca4b8d8d0e25e09d83d1cd/Untitled%203.png)
+<img src="/assets/writeup/cookie/Best bathroom on campus e086b9d3d3ca4b8d8d0e25e09d83d1cd/Untitled 3.png">
