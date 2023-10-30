@@ -1,3 +1,9 @@
+---
+title: Write-Up SUPER ADMIN
+date: 2023-10-4 7:55:00 +0700
+categories: [CTF, UDCTF-2023, Write-Up]
+tags: [web, write-up, ctf]     # TAG names should always be lowercase
+---
 # SUPER ADMIN
 
 Truy cập vào trang web thì ta thấy 
