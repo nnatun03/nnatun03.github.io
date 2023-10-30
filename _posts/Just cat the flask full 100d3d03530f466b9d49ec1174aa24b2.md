@@ -1,3 +1,9 @@
+---
+title: Write-Up Just cat the flask full
+date: 2023-10-4 7:55:00 +0700
+categories: [CTF, UDCTF-2023, Write-Up]
+tags: [web, write-up, ctf]     # TAG names should always be lowercase
+---
 # Just cat the flask full
 
 - Truy cập vào trang web và nhận thấy
