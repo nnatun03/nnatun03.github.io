@@ -1,3 +1,9 @@
+---
+title: Write-Up SQL 4 DUMMIES
+date: 2023-10-4 7:55:00 +0700
+categories: [CTF, UDCTF-2023, Write-Up]
+tags: [web, write-up, ctf]     # TAG names should always be lowercase
+---
 # SQL 4 DUMMIES
 
 - Truy cập vào trang web thì ta thấy 1 form login, và ta biết được tài khoản là rickjames
