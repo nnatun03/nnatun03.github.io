@@ -1,3 +1,9 @@
+---
+title: Write-Up Best bathroom on campus
+date: 2023-10-4 7:55:00 +0700
+categories: [CTF, UDCTF-2023, Write-Up]
+tags: [web, write-up, ctf]     # TAG names should always be lowercase
+---
 # Best bathroom on campus
 
 <img src="/assets/writeup/cookie/Best bathroom on campus e086b9d3d3ca4b8d8d0e25e09d83d1cd/Untitled.png">
