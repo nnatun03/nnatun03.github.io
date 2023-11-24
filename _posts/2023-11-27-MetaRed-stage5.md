@@ -1,5 +1,5 @@
 ---
-title: Write-Up MetaRed CTF 2023 - Stage 3
+title: Write-Up MetaRed CTF 2023 - Stage 5
 date: 2023-11-23 7:55:00 +0700
 categories: [CTF, MetaRed-CTF-2023, Write-Up]
 tags: [web, write-up, ctf]     # TAG names should always be lowercase
