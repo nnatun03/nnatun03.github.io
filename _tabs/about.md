@@ -6,7 +6,7 @@ order: 4
 
 # Nguyễn Ngọc Anh Tuấn
 **Something about me ^^**
-hello mọi người, mình là sinh viên năm 3 của đại học FPT, blog này là nơi mình chia sẻ writeup CTF từ các cuộc thi hoặc của các trang mà mình đã giải ( hoặc ăn cắp )
+hello mọi người, mình là sinh viên năm 3 của đại học FPT, blog này là nơi mình chia sẻ writeup CTF từ các cuộc thi hoặc của các trang mà mình đã giải
 
 **Contact**
 
@@ -17,7 +17,7 @@ hello mọi người, mình là sinh viên năm 3 của đại học FPT, blog n
 ---
 **Information**
 
-<img src="/assets/img/favicons/cv11111.png">
+<img src="/assets/img/favicons/2023-12-02_20-03.png">
 
 
 ---
