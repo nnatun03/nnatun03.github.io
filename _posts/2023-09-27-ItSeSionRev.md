@@ -31,7 +31,7 @@ Hmm... A simple Calculator app definitely NOTHING special :))
 
 <img src="/assets/writeup/cookie/IT SeSsion rev/1.png">
 
-- Ta nhận thấy server đã báo lỗi vì xuất hiện kí tự `{}` và phép toán của ta đã không được thực thi, tuy nhiến nếu ta chèn như thế này `{{ 1 x 3 }}` (thay x bằng * nhé vì mình dùng * push ko đc bị lỗi huhu)
+- Ta nhận thấy server đã báo lỗi vì xuất hiện kí tự `{}` và phép toán của ta đã không được thực thi, tuy nhiến nếu ta chèn như thế này `{{ 1 * 3 }}` (thay x bằng * nhé vì mình dùng * push ko đc bị lỗi huhu)
 
 <img src="/assets/writeup/cookie/IT SeSsion rev/2.png">
 
