@@ -3,6 +3,7 @@ title: Write-Up Password Reset
 date: 2023-10-14 6:34:01 +0700
 categories: [CTF, Cookie Hân Hoan, Write-Up]
 tags: [web, write-up, ctf]     # TAG names should always be lowercase
+pin: true
 ---
 
 # Password Reset
