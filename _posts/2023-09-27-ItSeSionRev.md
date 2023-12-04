@@ -23,7 +23,7 @@ Hmm... A simple Calculator app definitely NOTHING special :))
 - Lúc này mình chuyển hướng qua khai thác lỗi khác, đó là SSTI (Server-Side Template Injection), giải thích sơ về SSTI như sau:
     - SSTI (Server-Side Template Injection) là một lỗ hổng bảo mật phổ biến xảy ra khi ứng dụng web không kiểm tra hoặc chống lại việc chèn mã template bên phía máy chủ (server-side templates) một cách an toàn. Điều này cho phép tin tặc chèn và thực thi mã bên phía máy chủ (thường là mã template) để tương tác với hệ thống hoặc ứng dụng web và có thể dẫn đến các hậu quả nghiêm trọng, bao gồm lấy thông tin nhạy cảm, thực hiện tấn công khác, hoặc kiểm soát máy chủ.
 - Dấu hiệu nhận biết SSTI bao gồm:
-    1. **Ký tự đặc biệt**: Kiểm tra sự xuất hiện của ký tự đặc biệt thường được sử dụng trong hệ thống template. Các ký tự như `{{`, **`{%`**, **`{#`**, **`$`**, **`|`**, `}}`, **`%}`**, **`#}`** có thể là dấu hiệu SSTI.
+    1. **Ký tự đặc biệt**: Kiểm tra sự xuất hiện của ký tự đặc biệt thường được sử dụng trong hệ thống template. Các ký tự như `\{{\`, **`{%`**, **`{#`**, **`$`**, **`|`**, `}}`, **`%}`**, **`#}`** có thể là dấu hiệu SSTI.
     2. **Sự kết hợp của ngôn ngữ template và mã bên phía máy chủ**: Khi thấy sự kết hợp của các lệnh hoặc cú pháp của ngôn ngữ template (như Jinja2, Twig, Freemarker) và biểu thức bên phía máy chủ, có thể là dấu hiệu SSTI.
     3. **Kết quả không mong muốn**: Khi thực hiện một số thao tác (như tính toán) và kết quả xuất hiện trên giao diện người dùng hoặc trong lỗi, đây có thể là dấu hiệu SSTI.
     4. **Đầu vào không được lọc**: Đầu vào người dùng không được kiểm tra hoặc lọc kỹ càng trước khi chèn vào template, dẫn đến khả năng chèn mã độc.
@@ -31,7 +31,7 @@ Hmm... A simple Calculator app definitely NOTHING special :))
 
 <img src="/assets/writeup/cookie/IT SeSsion rev/1.png">
 
-- Ta nhận thấy server đã báo lỗi vì xuất hiện kí tự `{}` và phép toán của ta đã không được thực thi, tuy nhiến nếu ta chèn như thế này `{{ 1 * 3 }}` (thay x bằng * nhé vì mình dùng * push ko đc bị lỗi huhu)
+- Ta nhận thấy server đã báo lỗi vì xuất hiện kí tự `{}` và phép toán của ta đã không được thực thi, tuy nhiến nếu ta chèn như thế này `\{{\ 1 * 3 \}}\` (thay bỏ \ nhé vì mình dùng không push ko đc bị lỗi huhu)
 
 <img src="/assets/writeup/cookie/IT SeSsion rev/2.png">
 
@@ -41,8 +41,8 @@ Hmm... A simple Calculator app definitely NOTHING special :))
 <img src="/assets/writeup/cookie/IT SeSsion rev/3.png">
 
 - Bạn có thể dễ dàng nhận thấy rằng kết quả của 7 x 7 không phải 49 mà là 1 chuỗi khác.
-    - Khi bạn thực hiện `calc={{ 7 * '7'}}` trong một ngữ cảnh sử dụng một hệ thống template như Jinja2 hoặc một ngôn ngữ tương tự, dấu hai ngoặc mở `{{` và `}}` thường được sử dụng để định tuyến các biểu thức và lệnh.
-    - Trong ví dụ trên, `7 * '7'` được giữa hai dấu ngoặc mở `{{` và `}}`, nhưng nó không được xem như một biểu thức số học bình thường trong ngữ cảnh của một hệ thống template. Thay vào đó, nó được xem như một chuỗi ký tự với một phép nhân giữa con số 7 và chuỗi '7'. Do đó, kết quả hiển thị là "7777777", trong đó số 7 được lặp lại bảy lần.
+    - Khi bạn thực hiện `calc=\{{\ 7 * '7'}}` trong một ngữ cảnh sử dụng một hệ thống template như Jinja2 hoặc một ngôn ngữ tương tự, dấu hai ngoặc mở `{{` và `}}` thường được sử dụng để định tuyến các biểu thức và lệnh.
+    - Trong ví dụ trên, `7 * '7'` được giữa hai dấu ngoặc mở `\{{\` và `}}`, nhưng nó không được xem như một biểu thức số học bình thường trong ngữ cảnh của một hệ thống template. Thay vào đó, nó được xem như một chuỗi ký tự với một phép nhân giữa con số 7 và chuỗi '7'. Do đó, kết quả hiển thị là "7777777", trong đó số 7 được lặp lại bảy lần.
 
 <img src="/assets/writeup/cookie/IT SeSsion rev/4.png">
 
@@ -50,7 +50,7 @@ Hmm... A simple Calculator app definitely NOTHING special :))
 
 - Okay, sau khi xác định được tempalte là Jinja2, mình thử test xem có thực thi được OS command không.
 
-Payload: `{{self._TemplateReference__context.cycler.**init**.**globals**.os.popen('id').read()}}`
+Payload: `\{{\self._TemplateReference__context.cycler.**init**.**globals**.os.popen('id').read()}}`
 
 1. `self._TemplateReference__context`: Truy cập vào biến `context` của đối tượng `TemplateReference`. Thường được sử dụng để truy cập đối tượng chứa các dữ liệu template.
 2. `cycler`: Đây có thể là một biến hay đối tượng có chứa thông tin về việc lặp lại hoặc chuyển đổi giữa các giá trị.
@@ -64,7 +64,7 @@ Payload: `{{self._TemplateReference__context.cycler.**init**.**globals**.os.pope
 - Việc bây giờ chúng ta cần làm là tìm flag trong hệ thống.
 - Vì server như trước mình đã nói, server đã filter khoảng trắng ( dấu cách ), nên chúng ta phải bypass được filter đó, trong trường hợp này mình dùng `tab` , có chức năng xuống hàng và tác dụng của nó tương tự khoảng trắng.
 
-payload:  `calc={{self._TemplateReference__context.cycler.**init**.**globals**.os.popen('ls<dấu TAB>-la').read()}}`
+payload:  `calc=\{{\self._TemplateReference__context.cycler.**init**.**globals**.os.popen('ls<dấu TAB>-la').read()}}`
 
 <img src="/assets/writeup/cookie/IT SeSsion rev/6.png">
 
