@@ -3,6 +3,7 @@ title: Write-Up IT SeSsion rev
 date: 2023-09-27 4:55:00 +0700
 categories: [CTF, FIA-FPTU, Write-Up]
 tags: [web, write-up, ctf]     # TAG names should always be lowercase
+pin: true
 ---
 # IT SeSsion rev
 Hmm... A simple Calculator app definitely NOTHING special :))
