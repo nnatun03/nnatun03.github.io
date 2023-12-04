@@ -3,6 +3,7 @@ title: Write-Up Go around a Webpage
 date: 2023-09-26 3:55:00 +0700
 categories: [CTF, FIA-FPTU, Write-Up]
 tags: [web, write-up, ctf]     # TAG names should always be lowercase
+pin: true
 ---
 # Go around a Webpage
 
