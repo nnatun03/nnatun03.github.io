@@ -3,6 +3,7 @@ title: Write-Up Play with python flask app
 date: 2023-10-4 7:55:00 +0700
 categories: [CTF, FIA-FPTU, Write-Up]
 tags: [web, write-up, ctf]     # TAG names should always be lowercase
+pin: true
 ---
 # Play with python flask app
 ## **Tổng quan**
