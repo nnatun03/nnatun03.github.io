@@ -49,7 +49,7 @@ Hmm... A simple Calculator app definitely NOTHING special :))
 
 - Okay, sau khi xác định được tempalte là Jinja2, mình thử test xem có thực thi được OS command không.
 
-Payload: `{{self._TemplateReference__context.cycler.**init**.**globals**.os.popen('id').read()}}`
+Payload: `{ { self._TemplateReference__context.cycler.**init**.**globals**.os.popen('id').read() } }` // xóa khoảng trắng đi nhé vì github filter :D
 
 1. `self._TemplateReference__context`: Truy cập vào biến `context` của đối tượng `TemplateReference`. Thường được sử dụng để truy cập đối tượng chứa các dữ liệu template.
 2. `cycler`: Đây có thể là một biến hay đối tượng có chứa thông tin về việc lặp lại hoặc chuyển đổi giữa các giá trị.
@@ -63,7 +63,7 @@ Payload: `{{self._TemplateReference__context.cycler.**init**.**globals**.os.pope
 - Việc bây giờ chúng ta cần làm là tìm flag trong hệ thống.
 - Vì server như trước mình đã nói, server đã filter khoảng trắng ( dấu cách ), nên chúng ta phải bypass được filter đó, trong trường hợp này mình dùng `tab` , có chức năng xuống hàng và tác dụng của nó tương tự khoảng trắng.
 
-payload:  `calc={{self._TemplateReference__context.cycler.**init**.**globals**.os.popen('ls<dấu TAB>-la').read()}}`
+payload:  `calc={ { self._TemplateReference__context.cycler.**init**.**globals**.os.popen('ls<dấu TAB>-la').read() } }`
 
 <img src="/assets/writeup/cookie/IT SeSsion rev/6.png">
 
