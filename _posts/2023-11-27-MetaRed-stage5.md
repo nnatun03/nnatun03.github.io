@@ -28,7 +28,7 @@ Plugin WordPress "The Secure Copy Content Protection and Content Locking" phiên
 
 Lỗ hổng này có thể cho phép kẻ tấn công thực hiện các cuộc tấn công SQL Injection bằng cách chèn các câu lệnh SQL độc hại vào giá trị của **`sccp_id`**.
 
-[https://www.exploit-db.com/exploits/50733](https://www.exploit-db.com/exploits/50733)
+h t t p s://www.exploit-db.com/exploits/50733
 
 <img src="/assets/writeup/cookie/MetaRed CTF 2023 - Stage 5 e42a378f8c09464288274c527d70a42a/Untitled 2.png">
 
