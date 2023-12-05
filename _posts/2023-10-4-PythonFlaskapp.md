@@ -156,7 +156,7 @@ Tức là ở đây, ta chỉ cần thỏa điều kiện của username thì c�
 
 ## `/whatismyname`
 
-- Khi truy cập vào thì ta biết được trang web sẽ trả về tên của người dùng, lúc này ta thử dùng '{{7*7}}' nhưng chèn vào tên, ta sẽ thay đổi tên thành như sau
+- Khi truy cập vào thì ta biết được trang web sẽ trả về tên của người dùng, lúc này ta thử dùng '{ { 7*7 } }' nhưng chèn vào tên, ta sẽ thay đổi tên thành như sau
 
 <img src="/assets/writeup/cookie/Play With python/Play with python flask app/20.png">
 
@@ -204,7 +204,7 @@ Tức là ở đây, ta chỉ cần thỏa điều kiện của username thì c�
 
 <img src="/assets/writeup/cookie/Play With python/Play with python flask app/28.png">
 
-- Thử test payload `{{7*7}}` ở trên url để kiểm tra xem trang web có bị lỗi phổ biến của thằng Jinja không thì…
+- Thử test payload `{ { 7*7 } }` ở trên url để kiểm tra xem trang web có bị lỗi phổ biến của thằng Jinja không thì…
 
 <img src="/assets/writeup/cookie/Play With python/Play with python flask app/29.png">
 
